@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{ADDE958D-EFDC-F14B-A567-975EA799B498}</ProjectGuid>
+    <ProjectGuid>{A5212BC1-FE8A-1D49-124E-B61569D87D14}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Timeline</AssemblyName>
@@ -85,8 +85,8 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Runtime\Playables\ActivationControlPlayable.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Runtime\Utilities\WeightUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Runtime\AssetUpgrade\ClipUpgrade.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Runtime\Utilities\TimelineClipExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Runtime\Audio\AudioTrack.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Runtime\Utilities\TimelineClipExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Runtime\Extensions\TrackExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Runtime\Evaluation\ScheduleRuntimeClip.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Runtime\Utilities\IPropertyCollector.cs" />
@@ -622,6 +622,14 @@
     </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Library\PackageCache\com.unity.services.wire@cc07372d5f37\Plugins\websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">

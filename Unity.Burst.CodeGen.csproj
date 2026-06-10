@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{23A2250A-3D3F-5ADF-E90B-422EC29CC467}</ProjectGuid>
+    <ProjectGuid>{EEF721AF-9F3F-C130-4A96-E84F9A1B085B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Burst.CodeGen</AssemblyName>
@@ -61,20 +61,20 @@
     <Analyzer Include="E:\UNITY\HMM\6000.0.43f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\CecilExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\BurstILPostProcessor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\AssemblyResolver.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\FunctionPointerInvokeTransform.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\ILPostProcessing.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\GenericContext.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\ILPostProcessingLegacy.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\CecilExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\BurstILPostProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\AssemblyResolver.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\FunctionPointerInvokeTransform.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\ILPostProcessing.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\GenericContext.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\ILPostProcessingLegacy.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll" />
-    <None Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll" />
-    <None Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll" />
-    <None Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\Unity.Burst.CodeGen.asmdef" />
-    <None Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll" />
+    <None Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll" />
+    <None Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll" />
+    <None Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll" />
+    <None Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\Unity.Burst.CodeGen.asmdef" />
+    <None Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -565,24 +565,28 @@
       <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@60ef35ffd3cd\net40\unity-custom\nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
-      <HintPath>Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
-      <HintPath>Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
-      <HintPath>Library\PackageCache\com.unity.burst@7a907cf5a459\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.burst@f7a407abf4d5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">
@@ -1100,7 +1104,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{C85B1059-EBC8-B8E3-D63A-9900380AC7CA}</Project>
+      <Project>{2889470E-F0AE-CE21-7BCE-B0FDDD342597}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
   </ItemGroup>

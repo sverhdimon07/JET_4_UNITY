@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>Unity.Multiplayer.Tools.NetVis.Configuration</RootNamespace>
-    <ProjectGuid>{8A9F38A3-6065-0BD1-6145-A36ADA247A6E}</ProjectGuid>
+    <ProjectGuid>{E3B8B2B8-D7D6-737D-40CD-3771FCD8B588}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Multiplayer.Tools.NetVis.Configuration</AssemblyName>
@@ -544,6 +544,10 @@
       <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\Managed\UnityEngine\UnityEditor.XRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Library\PackageCache\com.unity.services.wire@cc07372d5f37\Plugins\websocket-sharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>Library\PackageCache\com.unity.collections@56bff8827a7e\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
       <Private>False</Private>
@@ -1075,19 +1079,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Multiplayer.Tools.Common.csproj">
-      <Project>{018B18C9-2D34-EC2E-84E4-983BBD06E82D}</Project>
+      <Project>{1B6D3147-F05A-3F17-1A70-FF4CADD9E5B3}</Project>
       <Name>Unity.Multiplayer.Tools.Common</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Tools.Adapters.csproj">
-      <Project>{43EA9088-5E33-6A7F-0A52-480C579AD318}</Project>
+      <Project>{250BCBFA-4EE7-71D8-9C6C-81A9D14EAE0F}</Project>
       <Name>Unity.Multiplayer.Tools.Adapters</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{C85B1059-EBC8-B8E3-D63A-9900380AC7CA}</Project>
+      <Project>{2889470E-F0AE-CE21-7BCE-B0FDDD342597}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{D0844DB1-4FFE-8BF5-5680-68AED280D728}</Project>
+      <Project>{14B17F73-46DD-A957-5381-6FAA14B787B7}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
   </ItemGroup>

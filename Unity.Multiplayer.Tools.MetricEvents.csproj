@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>Unity.Multiplayer.Tools.MetricEvents</RootNamespace>
-    <ProjectGuid>{7032179C-2718-3CD1-012A-5E97385C5EDF}</ProjectGuid>
+    <ProjectGuid>{8B914C2B-319A-9DEC-17D3-82EA7AF7CA36}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Multiplayer.Tools.MetricEvents</AssemblyName>
@@ -547,6 +547,14 @@
     </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Library\PackageCache\com.unity.services.wire@cc07372d5f37\Plugins\websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
@@ -1108,15 +1116,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Collections.csproj">
-      <Project>{8961F207-3E2C-C460-0AAD-EA21B44CD8EA}</Project>
+      <Project>{CE17B368-B6C7-89DC-05FF-8A4F44AC3D68}</Project>
       <Name>Unity.Collections</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Tools.MetricTypes.csproj">
-      <Project>{E87FC063-C434-7FFB-235E-6FD74F28D177}</Project>
+      <Project>{F583FF59-C854-45A7-5828-5BA080746864}</Project>
       <Name>Unity.Multiplayer.Tools.MetricTypes</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Tools.NetStats.csproj">
-      <Project>{5D24912C-5C0E-03AE-5BEF-7BC09A1DC469}</Project>
+      <Project>{938BDD70-631F-3793-6593-3C9B94AA3BAB}</Project>
       <Name>Unity.Multiplayer.Tools.NetStats</Name>
     </ProjectReference>
   </ItemGroup>

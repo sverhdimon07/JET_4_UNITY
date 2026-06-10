@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8961F207-3E2C-C460-0AAD-EA21B44CD8EA}</ProjectGuid>
+    <ProjectGuid>{CE17B368-B6C7-89DC-05FF-8A4F44AC3D68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Collections</AssemblyName>
@@ -76,8 +76,8 @@
     <Compile Include="Library\PackageCache\com.unity.collections@56bff8827a7e\Unity.Collections\UnsafeParallelHashMap.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@56bff8827a7e\Unity.Collections\UnsafeHashMap.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@56bff8827a7e\Unity.Collections\xxHash3.StreamingState.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collections@56bff8827a7e\Unity.Collections\FixedStringMethods.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@56bff8827a7e\Unity.Collections\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collections@56bff8827a7e\Unity.Collections\FixedStringMethods.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@56bff8827a7e\Unity.Collections\FixedString.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@56bff8827a7e\Unity.Collections\NativeSort.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@56bff8827a7e\Unity.Collections\DataStreamWriter.cs" />
@@ -614,6 +614,14 @@
     </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Library\PackageCache\com.unity.services.wire@cc07372d5f37\Plugins\websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
@@ -1175,11 +1183,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{C85B1059-EBC8-B8E3-D63A-9900380AC7CA}</Project>
+      <Project>{2889470E-F0AE-CE21-7BCE-B0FDDD342597}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{D0844DB1-4FFE-8BF5-5680-68AED280D728}</Project>
+      <Project>{14B17F73-46DD-A957-5381-6FAA14B787B7}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
   </ItemGroup>

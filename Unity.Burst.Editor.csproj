@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{268EDC7E-550E-EB5A-DB0C-3F8F04FBCB9D}</ProjectGuid>
+    <ProjectGuid>{EE38D9E9-3445-A021-3890-BB88600851F1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Burst.Editor</AssemblyName>
@@ -61,28 +61,28 @@
     <Analyzer Include="E:\UNITY\HMM\6000.0.43f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstInspectorGUI.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstDisassembler.Core.LLVMIR.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstDisassembler.Core.x86.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstAotCompiler.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\LabeledPopup.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstDisassembler.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstDisassembler.Core.x86.info.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstMath.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstDisassembler.Core.Wasm.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstDisassembler.Core.LLVMIR.info.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstPlatformAotSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstDisassembler.Core.ARM64.info.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\LongTextArea.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstDisassembler.Core.ARM64.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstStringSearch.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstDisassembler.Core.Wasm.info.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstLoader.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstDisassembler.Core.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\BurstMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstInspectorGUI.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstDisassembler.Core.LLVMIR.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstDisassembler.Core.x86.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstAotCompiler.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\LabeledPopup.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstDisassembler.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstDisassembler.Core.x86.info.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstMath.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstDisassembler.Core.Wasm.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstDisassembler.Core.LLVMIR.info.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstPlatformAotSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstDisassembler.Core.ARM64.info.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\LongTextArea.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstDisassembler.Core.ARM64.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstStringSearch.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstDisassembler.Core.Wasm.info.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstLoader.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstDisassembler.Core.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\BurstMenu.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.burst@7a907cf5a459\Editor\Unity.Burst.Editor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.burst@f7a407abf4d5\Editor\Unity.Burst.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -571,6 +571,14 @@
     </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Library\PackageCache\com.unity.services.wire@cc07372d5f37\Plugins\websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
@@ -1144,15 +1152,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{C85B1059-EBC8-B8E3-D63A-9900380AC7CA}</Project>
+      <Project>{2889470E-F0AE-CE21-7BCE-B0FDDD342597}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{3FB4A97A-3AF9-7F02-75F6-25F505107956}</Project>
+      <Project>{DF94894E-F2F3-AAA7-8339-17B959001FA7}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{18F975BA-5AA9-E596-FA20-B2F9E88844BA}</Project>
+      <Project>{AB41AB4A-CB47-9140-FC2C-4C71D985770D}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3C001529-5354-73EB-865C-1E0814E82DAB}</ProjectGuid>
+    <ProjectGuid>{0D1E3A9B-9C4E-4FE1-2097-7194E4225DDE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Networking.Transport</AssemblyName>
@@ -20,7 +20,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <NoWarn>0169;USG0001</NoWarn>
-    <DefineConstants>UNITY_6000_0_43;UNITY_6000_0;UNITY_6000;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2023_1_OR_NEWER;UNITY_2023_2_OR_NEWER;UNITY_2023_3_OR_NEWER;UNITY_6000_0_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_MARSHALLING_TESTS;ENABLE_VIDEO;ENABLE_NAVIGATION_OFFMESHLINK_TO_NAVMESHLINK;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;TEXTCORE_1_0_OR_NEWER;EDITOR_ONLY_NAVMESH_BUILDER_DEPRECATED;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_AMD;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_USES_EXPLICIT_MEMORY_MANAGER_INITIALIZER;PLATFORM_SUPPORTS_WAIT_FOR_PRESENTATION;PLATFORM_SUPPORTS_SPLIT_GRAPHICS_JOBS;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_6000_0_43;UNITY_6000_0;UNITY_6000;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2023_1_OR_NEWER;UNITY_2023_2_OR_NEWER;UNITY_2023_3_OR_NEWER;UNITY_6000_0_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_MARSHALLING_TESTS;ENABLE_VIDEO;ENABLE_NAVIGATION_OFFMESHLINK_TO_NAVMESHLINK;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;TEXTCORE_1_0_OR_NEWER;EDITOR_ONLY_NAVMESH_BUILDER_DEPRECATED;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_AMD;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_USES_EXPLICIT_MEMORY_MANAGER_INITIALIZER;PLATFORM_SUPPORTS_WAIT_FOR_PRESENTATION;PLATFORM_SUPPORTS_SPLIT_GRAPHICS_JOBS;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER;FISHNET;FISHNET_V4;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -61,94 +61,102 @@
     <Analyzer Include="E:\UNITY\HMM\6000.0.43f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\Messages\RelayMessagePing.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Layers\LogLayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\AtomicFreeList.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\ConnectionId.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\StreamSegmentationParameters.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\TLS\UnityTLSConfiguration.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Pipelines\UnreliableSequencedPipelineStage.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\INetworkInterface.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Pipelines\FragmentationUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\NetworkConnection.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\BaselibNetworkInterface.deprecated.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Pipelines\FragmentationPipelineStage.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\Messages\RelayMessageError.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\IPCNetworkInterface.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\Messages\RelayMessageAccepted.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\RelayConnectionStatus.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Pipelines\ReliableSequencedPipelineStage.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\NetworkPipeline.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\RelayAllocationId.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\ConnectionDataMap.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Layers\TLSLayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\TLS\SecureParameters.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\TransportFunctionPointer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Utilities.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\PacketMetadata.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\OperationResult.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\TCPNetworkInterface.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\WebSocket\WebSocketParameters.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\NetworkDriverSender.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\NetworkDriver.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Layers\BottomLayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\Messages\RelayMessageDisconnect.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\TLS\FixedPEMString.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Pipelines\ReliableUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Layers\SimpleConnectionLayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\TLS\DTLSUtilities.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\PacketsQueue.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\TLS\UnityTLSCallbacks.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Utilities\ManagedReference.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\UnderlyingConnectionList.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Layers\StreamSegmentationLayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\ConnectionToken.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Layers\TopLayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Pipelines\SimulatorPipelineStage.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\NetworkInterfaceUnmanagedWrapper.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\HMACSHA256.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\SHA256.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\NetworkStack.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\RelayHMACKey.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\WebSocketNetworkInterface.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Pipelines\SimulatorUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\NetworkDriverRelayExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Layers\WebSocketLayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Utilities\ManagedCallWrapper.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\PacketBuffer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\INetworkLayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\ConnectionList.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\PacketProcessor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\NetworkEventQueue.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Layers\RelayLayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\NetworkEndpoint.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\RelayServerData.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Layers\NetworkInterfaceLayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\NetworkSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\NetworkDriverReceiver.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Pipelines\ReliableAckMask.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\RelayNetworkParameter.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\MultiNetworkDriver.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\NetworkLayerWrapper.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\IPCManager.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Layers\DTLSLayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\Messages\RelayMessageRelay.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\Messages\RelayMessageConnectRequest.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\RelayConnectionData.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\WebSocket\WebSocket.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Pipelines\NullPipelineStage.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\Messages\RelayMessageHeader.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\UDPNetworkInterface.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Layers\SimulatorLayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\NetworkParams.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\BaselibNetworkArray.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Layers\StreamToDatagramLayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Relay\Messages\RelayMessageBind.cs" />
-    <Compile Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\LoggingParameters.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Analytics\ConnectionMedium.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\Messages\RelayMessagePing.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Layers\LogLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\AtomicFreeList.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\ConnectionId.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\StreamSegmentationParameters.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\TLS\UnityTLSConfiguration.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Pipelines\UnreliableSequencedPipelineStage.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\INetworkInterface.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Pipelines\FragmentationUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\NetworkConnection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Pipelines\FragmentationPipelineStage.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\BaselibNetworkInterface.deprecated.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\Messages\RelayMessageError.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\IPCNetworkInterface.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\Messages\RelayMessageAccepted.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\RelayConnectionStatus.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Pipelines\ReliableSequencedPipelineStage.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\NetworkPipeline.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\RelayAllocationId.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\ConnectionDataMap.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Layers\TLSLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\TLS\SecureParameters.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\TransportFunctionPointer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Utilities.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\PacketMetadata.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\OperationResult.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\TCPNetworkInterface.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\WebSocket\WebSocketParameters.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\NetworkDriverSender.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\NetworkDriver.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Utilities\NativeDynamicRingQueue.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Layers\BottomLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\Messages\RelayMessageDisconnect.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\TLS\FixedPEMString.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Pipelines\ReliableUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Layers\SimpleConnectionLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\TLS\DTLSUtilities.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\PacketsQueue.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\TLS\UnityTLSCallbacks.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Analytics\PacketSizeStatistics.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Utilities\ManagedReference.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Analytics\BandwidthStatistics.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\UnderlyingConnectionList.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Layers\StreamSegmentationLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\ConnectionToken.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Layers\TopLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Analytics\ConnectionStatistics.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Pipelines\SimulatorPipelineStage.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Analytics\DriverStatistics.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\NetworkInterfaceUnmanagedWrapper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\HMACSHA256.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\SHA256.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\NetworkStack.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\RelayHMACKey.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Layers\AnalyticsLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\WebSocketNetworkInterface.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Pipelines\SimulatorUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\NetworkDriverRelayExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Layers\WebSocketLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Utilities\ManagedCallWrapper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\PacketBuffer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\INetworkLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\ConnectionList.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\PacketProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\NetworkEventQueue.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Layers\RelayLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\NetworkEndpoint.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\RelayServerData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Layers\NetworkInterfaceLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\NetworkSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\NetworkDriverReceiver.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Pipelines\ReliableAckMask.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\RelayNetworkParameter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\MultiNetworkDriver.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\NetworkLayerWrapper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\IPCManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Layers\DTLSLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\Messages\RelayMessageRelay.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\Messages\RelayMessageConnectRequest.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\RelayConnectionData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\WebSocket\WebSocket.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Pipelines\NullPipelineStage.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\Messages\RelayMessageHeader.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\UDPNetworkInterface.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Layers\SimulatorLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\NetworkParams.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\BaselibNetworkArray.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Layers\StreamToDatagramLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Relay\Messages\RelayMessageBind.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Analytics\RunningStatistics.cs" />
+    <Compile Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\LoggingParameters.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.transport@6e74a0e6481d\Runtime\Unity.Networking.Transport.asmdef" />
+    <None Include="Library\PackageCache\com.unity.transport@56cfdfbf9d44\Runtime\Unity.Networking.Transport.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -631,6 +639,14 @@
       <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Library\PackageCache\com.unity.services.wire@cc07372d5f37\Plugins\websocket-sharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
@@ -641,6 +657,10 @@
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@60ef35ffd3cd\net40\unity-custom\nunit.framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FishNet.CodeAnalysis">
+      <HintPath>Assets\FishNet\Runtime\Plugins\CodeAnalysis\FishNet.CodeAnalysis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
@@ -1186,15 +1206,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{C85B1059-EBC8-B8E3-D63A-9900380AC7CA}</Project>
+      <Project>{2889470E-F0AE-CE21-7BCE-B0FDDD342597}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Collections.csproj">
-      <Project>{8961F207-3E2C-C460-0AAD-EA21B44CD8EA}</Project>
+      <Project>{CE17B368-B6C7-89DC-05FF-8A4F44AC3D68}</Project>
       <Name>Unity.Collections</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{D0844DB1-4FFE-8BF5-5680-68AED280D728}</Project>
+      <Project>{14B17F73-46DD-A957-5381-6FAA14B787B7}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
   </ItemGroup>

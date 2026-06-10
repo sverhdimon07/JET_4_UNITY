@@ -173,6 +173,10 @@ public struct ReconcileData : IReconcileData
 }
 */
 
+
+
+
+/*
 using FishNet.Object;
 using UnityEngine;
 
@@ -297,6 +301,132 @@ public class PlayerMovement : NetworkBehaviour
         Camera cam = GetActiveCamera();
         if (cam == null) return;
 
+        Vector3 forward = cam.transform.forward;
+        forward.y = 0f;
+        if (forward.sqrMagnitude > 0.01f)
+        {
+            float angle = Mathf.Atan2(forward.x, forward.z) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            _targetYRotation = angle;
+        }
+    }
+}*/
+
+using FishNet.Object;
+using UnityEngine;
+
+[RequireComponent(typeof(CharacterController))]
+public class PlayerMovement : NetworkBehaviour
+{
+    [Header("Movement")]
+    [SerializeField] private float _speed = 5f;
+    [SerializeField] private float _gravity = -9.81f;
+
+    [Header("Camera Follow Rotation")]
+    [SerializeField] private float _rotationSpeed = 10f;
+    [SerializeField] private bool _smoothRotation = true;
+    [SerializeField] private float _rotationThreshold = 5f;
+
+    [Header("Camera Reference")]
+    [SerializeField] private Camera _playerCamera;
+
+    private CharacterController _cc;
+    private float _verticalVelocity;
+    private float _targetYRotation;
+
+    private void Awake() => _cc = GetComponent<CharacterController>();
+
+    private void Update()
+    {
+        if (!base.IsOwner) return;
+
+        var playerNetwork = GetComponent<PlayerNetwork>();
+        if (playerNetwork != null && !playerNetwork.IsAlive.Value) return;
+
+        UpdateRotationFromCamera();
+        HandleMovement();
+    }
+
+    private void UpdateRotationFromCamera()
+    {
+        Camera cam = GetActiveCamera();
+        if (cam == null) return;
+
+        Vector3 camForward = cam.transform.forward;
+        camForward.y = 0f;
+        if (camForward.sqrMagnitude < 0.01f) return;
+
+        float targetAngle = Mathf.Atan2(camForward.x, camForward.z) * Mathf.Rad2Deg;
+        float angleDiff = Mathf.DeltaAngle(transform.eulerAngles.y, targetAngle);
+        if (Mathf.Abs(angleDiff) < _rotationThreshold) return;
+
+        if (_smoothRotation)
+        {
+            _targetYRotation = Mathf.MoveTowardsAngle(
+                _targetYRotation,
+                targetAngle,
+                _rotationSpeed * Time.deltaTime
+            );
+        }
+        else
+        {
+            _targetYRotation = targetAngle;
+        }
+
+        transform.rotation = Quaternion.Euler(0f, _targetYRotation, 0f);
+    }
+
+    private void HandleMovement()
+    {
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
+        if (Mathf.Abs(h) < 0.01f && Mathf.Abs(v) < 0.01f)
+        {
+            ApplyGravityOnly();
+            return;
+        }
+
+        Camera cam = GetActiveCamera();
+        Vector3 camForward = cam != null ? cam.transform.forward : transform.forward;
+        Vector3 camRight = cam != null ? cam.transform.right : transform.right;
+        camForward.y = 0f;
+        camRight.y = 0f;
+
+        Vector3 moveDirection = (camForward * v + camRight * h).normalized;
+
+        _verticalVelocity += _gravity * Time.deltaTime;
+        if (_cc.isGrounded && _verticalVelocity < 0) _verticalVelocity = -2f;
+
+        Vector3 velocity = moveDirection * _speed;
+        velocity.y = _verticalVelocity;
+        _cc.Move(velocity * Time.deltaTime);
+    }
+
+    private void ApplyGravityOnly()
+    {
+        _verticalVelocity += _gravity * Time.deltaTime;
+        if (_cc.isGrounded && _verticalVelocity < 0) _verticalVelocity = -2f;
+        _cc.Move(new Vector3(0f, _verticalVelocity, 0f) * Time.deltaTime);
+    }
+
+    private Camera GetActiveCamera()
+    {
+        if (_playerCamera != null && _playerCamera.gameObject.activeInHierarchy)
+            return _playerCamera;
+        Camera cam = GetComponentInChildren<Camera>();
+        if (cam != null && cam.gameObject.activeInHierarchy)
+            return cam;
+        return Camera.main;
+    }
+
+    public void SetRotationSpeed(float speed) => _rotationSpeed = speed;
+    public void ResetVerticalVelocity() => _verticalVelocity = 0f;
+
+    public void SnapRotationToCamera()
+    {
+        Camera cam = GetActiveCamera();
+        if (cam == null) return;
         Vector3 forward = cam.transform.forward;
         forward.y = 0f;
         if (forward.sqrMagnitude > 0.01f)

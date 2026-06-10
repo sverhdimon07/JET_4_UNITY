@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>Unity.Multiplayer.Tools.NetworkProfiler.Editor</RootNamespace>
-    <ProjectGuid>{C3A32235-A6C8-6B90-DF0F-85D5462DEC18}</ProjectGuid>
+    <ProjectGuid>{B240DA91-65EC-3CE2-6768-AB4D3458A46E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Multiplayer.Tools.NetworkProfiler.Editor</AssemblyName>
@@ -608,6 +608,14 @@
       <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Library\PackageCache\com.unity.services.wire@cc07372d5f37\Plugins\websocket-sharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
@@ -1179,39 +1187,39 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Profiling.Core.csproj">
-      <Project>{BB65462B-BB3D-FED3-6AE0-A3BB238025E5}</Project>
+      <Project>{A448A98F-D4E4-7CD9-36ED-25F484D7C227}</Project>
       <Name>Unity.Profiling.Core</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Tools.Common.csproj">
-      <Project>{018B18C9-2D34-EC2E-84E4-983BBD06E82D}</Project>
+      <Project>{1B6D3147-F05A-3F17-1A70-FF4CADD9E5B3}</Project>
       <Name>Unity.Multiplayer.Tools.Common</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Tools.NetworkProfiler.Runtime.csproj">
-      <Project>{AB5E3966-8DEA-77A9-1ADD-82B7249DC9B7}</Project>
+      <Project>{612E55C6-3370-CFC5-E676-5D0AC7048F60}</Project>
       <Name>Unity.Multiplayer.Tools.NetworkProfiler.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Tools.NetStats.csproj">
-      <Project>{5D24912C-5C0E-03AE-5BEF-7BC09A1DC469}</Project>
+      <Project>{938BDD70-631F-3793-6593-3C9B94AA3BAB}</Project>
       <Name>Unity.Multiplayer.Tools.NetStats</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Tools.MetricTypes.csproj">
-      <Project>{E87FC063-C434-7FFB-235E-6FD74F28D177}</Project>
+      <Project>{F583FF59-C854-45A7-5828-5BA080746864}</Project>
       <Name>Unity.Multiplayer.Tools.MetricTypes</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Tools.NetworkSolutionInterface.csproj">
-      <Project>{1B5CCDA9-2339-B467-B230-DC92CA68A60E}</Project>
+      <Project>{00587179-D144-5BF3-C4C2-53BBA06838BD}</Project>
       <Name>Unity.Multiplayer.Tools.NetworkSolutionInterface</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Collections.csproj">
-      <Project>{8961F207-3E2C-C460-0AAD-EA21B44CD8EA}</Project>
+      <Project>{CE17B368-B6C7-89DC-05FF-8A4F44AC3D68}</Project>
       <Name>Unity.Collections</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{3FB4A97A-3AF9-7F02-75F6-25F505107956}</Project>
+      <Project>{DF94894E-F2F3-AAA7-8339-17B959001FA7}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{18F975BA-5AA9-E596-FA20-B2F9E88844BA}</Project>
+      <Project>{AB41AB4A-CB47-9140-FC2C-4C71D985770D}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

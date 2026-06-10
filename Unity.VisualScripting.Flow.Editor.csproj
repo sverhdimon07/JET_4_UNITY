@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1B959A4A-0CA4-3DD5-F884-60C75F3EF070}</ProjectGuid>
+    <ProjectGuid>{4BCA34B0-AAF4-926A-3DDF-369749E6A857}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.VisualScripting.Flow.Editor</AssemblyName>
@@ -134,8 +134,8 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Plugin\Migrations\Migration_1_1_3_to_1_2_0.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Description\FlowGraphDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Framework\Nesting\SuperUnitDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\FlowGraphContext.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Framework\Codebase\LiteralWidget.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\FlowGraphContext.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Framework\Nesting\GraphOutputAnalyser.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Framework\Control\SelectOnEnumDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Framework\Variables\VariableKindOption.cs" />
@@ -204,8 +204,8 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Plugin\Changelogs\Changelog_1_4_6.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Framework\Codebase\SetMemberDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Plugin\Migrations\Migration_1_2_0_to_1_2_2.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Ports\UnitOutputPortWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Framework\MultiInputUnitNumericDescriptor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Ports\UnitOutputPortWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Ports\ValueInputWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Description\FlowMachineDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Flow\Framework\Codebase\OnInputSystemEventAnalyser.cs" />
@@ -721,6 +721,14 @@
     </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Library\PackageCache\com.unity.services.wire@cc07372d5f37\Plugins\websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
@@ -1294,27 +1302,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{AE94C0D4-910A-73F6-F0C7-8A239015EBEE}</Project>
+      <Project>{0068DF6C-95A3-704A-71AB-E672C6C4EA13}</Project>
       <Name>Unity.VisualScripting.Core</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{6FC7E07A-916C-3822-8090-E87083B2D9CA}</Project>
+      <Project>{F1B75032-C5B8-762C-6B81-154AFBE4A6B6}</Project>
       <Name>Unity.VisualScripting.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{28C7C812-45BC-76BB-2B5D-1BFF81ABBFA5}</Project>
+      <Project>{EEB2DCB9-83FC-D311-8A04-61317CC684D5}</Project>
       <Name>Unity.VisualScripting.Flow</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{23330E66-8F41-88EC-43A7-3B681D299048}</Project>
+      <Project>{8AAC5047-A6FB-84FC-777D-2BF0BF6DE850}</Project>
       <Name>Unity.InputSystem</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{3FB4A97A-3AF9-7F02-75F6-25F505107956}</Project>
+      <Project>{DF94894E-F2F3-AAA7-8339-17B959001FA7}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{18F975BA-5AA9-E596-FA20-B2F9E88844BA}</Project>
+      <Project>{AB41AB4A-CB47-9140-FC2C-4C71D985770D}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

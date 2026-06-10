@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>Unity.Multiplayer.Tools.NetStatsMonitor</RootNamespace>
-    <ProjectGuid>{F57B6F35-9074-5200-879B-308E72F2BA7F}</ProjectGuid>
+    <ProjectGuid>{C786F673-F86F-2E53-91B8-40902E02666B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Multiplayer.Tools.NetStatsMonitor.Component</AssemblyName>
@@ -547,6 +547,14 @@
     </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Library\PackageCache\com.unity.services.wire@cc07372d5f37\Plugins\websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
@@ -1108,19 +1116,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Multiplayer.Tools.Common.csproj">
-      <Project>{018B18C9-2D34-EC2E-84E4-983BBD06E82D}</Project>
+      <Project>{1B6D3147-F05A-3F17-1A70-FF4CADD9E5B3}</Project>
       <Name>Unity.Multiplayer.Tools.Common</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Tools.NetStats.csproj">
-      <Project>{5D24912C-5C0E-03AE-5BEF-7BC09A1DC469}</Project>
+      <Project>{938BDD70-631F-3793-6593-3C9B94AA3BAB}</Project>
       <Name>Unity.Multiplayer.Tools.NetStats</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Tools.NetStatsMonitor.Configuration.csproj">
-      <Project>{FE818913-07E6-80F4-62DB-453471539CE0}</Project>
+      <Project>{99B54FC7-15D7-2FCD-39F4-4B913B2DD653}</Project>
       <Name>Unity.Multiplayer.Tools.NetStatsMonitor.Configuration</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Tools.NetStatsMonitor.Implementation.csproj">
-      <Project>{36BB4A14-A140-5E0A-76B1-360AC10CACF9}</Project>
+      <Project>{1B3B4CB6-41F6-0E41-315E-DFA939E03EA2}</Project>
       <Name>Unity.Multiplayer.Tools.NetStatsMonitor.Implementation</Name>
     </ProjectReference>
   </ItemGroup>

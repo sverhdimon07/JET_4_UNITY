@@ -48,6 +48,8 @@ public class PlayerView : NetworkBehaviour
 }
 */
 
+
+/*
 using TMPro;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
@@ -104,6 +106,65 @@ public class PlayerView : NetworkBehaviour
     }
 
     private void OnHpChanged(int oldValue, int newValue, bool asServer)
+    {
+        if (_hpText != null)
+            _hpText.text = $"HP: {newValue}";
+    }
+}
+*/
+
+using TMPro;
+using FishNet.Object;
+using UnityEngine;
+
+public class PlayerView : NetworkBehaviour
+{
+    [SerializeField] private PlayerNetwork _playerNetwork;
+    [SerializeField] private TMP_Text _nicknameText;
+    [SerializeField] private TMP_Text _hpText;
+
+    private void Awake()
+    {
+        if (_playerNetwork == null)
+            _playerNetwork = GetComponent<PlayerNetwork>();
+    }
+
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        if (_playerNetwork == null)
+        {
+            Debug.LogError("[PlayerView] PlayerNetwork не найден!");
+            return;
+        }
+
+        // Подписываемся на публичные события PlayerNetwork
+        _playerNetwork.OnNicknameChanged += OnNicknameChangedHandler;
+        _playerNetwork.OnHpChanged += OnHpChangedHandler;
+
+        // Первоначальное обновление UI
+        OnNicknameChangedHandler(_playerNetwork.Nickname.Value);
+        OnHpChangedHandler(_playerNetwork.HP.Value);
+    }
+
+    public override void OnStopClient()
+    {
+        base.OnStopClient();
+        if (_playerNetwork != null)
+        {
+            _playerNetwork.OnNicknameChanged -= OnNicknameChangedHandler;
+            _playerNetwork.OnHpChanged -= OnHpChangedHandler;
+        }
+    }
+
+    private void OnNicknameChangedHandler(string newValue)
+    {
+        if (_nicknameText != null)
+            _nicknameText.text = newValue;
+    }
+
+    private void OnHpChangedHandler(int newValue)
     {
         if (_hpText != null)
             _hpText.text = $"HP: {newValue}";

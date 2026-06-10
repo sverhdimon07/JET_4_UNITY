@@ -275,7 +275,7 @@ public class PickupManager : MonoBehaviour
 }
 */
 
-
+/*
 using FishNet.Object;
 using FishNet.Managing;
 using UnityEngine;
@@ -405,5 +405,141 @@ public class PickupManager : MonoBehaviour
         var networkManager = InstanceFinder.NetworkManager;
         if (networkManager != null)
             networkManager.ServerManager.OnServerConnectionState -= OnServerConnectionState;
+    }
+}
+*/
+
+
+using FishNet;
+using FishNet.Managing;
+using FishNet.Object;
+using FishNet.Transporting;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PickupManager : MonoBehaviour
+{
+    [SerializeField] private GameObject _healthPickupPrefab;
+    [SerializeField] private Transform[] _spawnPoints;
+    [SerializeField] private float _respawnDelay = 10f;
+    [SerializeField] private int _initialSpawnCount = 3;
+
+    private bool _isInitialized;
+    private NetworkManager _networkManager;
+
+    private void Awake()
+    {
+        Debug.Log("[PickupManager] Awake called");
+    }
+
+    private void Start()
+    {
+        Debug.Log("[PickupManager] Start called");
+
+        _networkManager = InstanceFinder.NetworkManager;
+        if (_networkManager == null)
+        {
+            Debug.LogError("[PickupManager] NetworkManager is NULL!");
+            enabled = false;
+            return;
+        }
+
+        if (_healthPickupPrefab == null)
+        {
+            Debug.LogError("[PickupManager] HealthPickup prefab NOT assigned!");
+            enabled = false;
+            return;
+        }
+
+        if (_spawnPoints == null || _spawnPoints.Length == 0)
+        {
+            Debug.LogError("[PickupManager] Spawn points NOT assigned!");
+            enabled = false;
+            return;
+        }
+
+        Debug.Log("[PickupManager] Subscribing to Server start");
+        _networkManager.ServerManager.OnServerConnectionState += OnServerConnectionState;
+    }
+
+    private void OnServerConnectionState(ServerConnectionStateArgs args)
+    {
+        if (args.ConnectionState == LocalConnectionState.Started)
+        {
+            Debug.Log("[PickupManager] Server started, IsServer: " + _networkManager.ServerManager.Started);
+            if (_networkManager.ServerManager.Started)
+            {
+                Initialize();
+            }
+        }
+    }
+
+    private void Initialize()
+    {
+        Debug.Log("[PickupManager] Initialize called");
+
+        if (_isInitialized)
+        {
+            Debug.LogWarning("[PickupManager] Already initialized!");
+            return;
+        }
+
+        _isInitialized = true;
+
+        Debug.Log($"[PickupManager] Spawning {_initialSpawnCount} health pickups");
+
+        int count = Mathf.Min(_initialSpawnCount, _spawnPoints.Length);
+
+        var shuffled = new List<Transform>(_spawnPoints);
+        for (int i = 0; i < shuffled.Count; i++)
+        {
+            int j = Random.Range(i, shuffled.Count);
+            var temp = shuffled[i];
+            shuffled[i] = shuffled[j];
+            shuffled[j] = temp;
+        }
+
+        for (int i = 0; i < count; i++)
+        {
+            Debug.Log($"[PickupManager] Spawning pickup {i + 1} at {shuffled[i].position}");
+            SpawnPickup(shuffled[i].position);
+        }
+    }
+
+    public void OnPickedUp(Vector3 position)
+    {
+        Debug.Log($"[PickupManager] OnPickedUp at {position}");
+        StartCoroutine(RespawnAfterDelay(position));
+    }
+
+    private IEnumerator RespawnAfterDelay(Vector3 position)
+    {
+        yield return new WaitForSeconds(_respawnDelay);
+        Debug.Log($"[PickupManager] Respawning at {position}");
+        SpawnPickup(position);
+    }
+
+    private void SpawnPickup(Vector3 position)
+    {
+        Debug.Log($"[PickupManager] SpawnPickup at {position}");
+
+        var go = Instantiate(_healthPickupPrefab, position, Quaternion.identity);
+
+        var pickup = go.GetComponent<HealthPickup>();
+        if (pickup != null)
+            pickup.Init(this, position);
+
+        var networkObj = go.GetComponent<NetworkObject>();
+        if (networkObj != null)
+            _networkManager.ServerManager.Spawn(networkObj);   // FishNet spawn
+
+        Debug.Log($"[PickupManager] Spawned: {go.name}");
+    }
+
+    private void OnDestroy()
+    {
+        if (_networkManager != null)
+            _networkManager.ServerManager.OnServerConnectionState -= OnServerConnectionState;
     }
 }

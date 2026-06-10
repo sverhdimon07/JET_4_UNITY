@@ -1,33 +1,4 @@
-/*
-using Unity.Netcode;
-using UnityEngine;
-
-public class Projectile : NetworkBehaviour
-{
-    [SerializeField] private float _speed = 18f;
-    [SerializeField] private int _damage = 20;
-
-    private void Update()
-    {
-        transform.Translate(Vector3.forward * _speed * Time.deltaTime);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!IsServer) return;
-
-        var target = other.GetComponent<PlayerNetwork>();
-        if (target == null) return;
-
-        if (target.OwnerClientId == OwnerClientId) return;
-
-        int newHp = Mathf.Max(0, target.HP.Value - _damage);
-        target.HP.Value = newHp;
-
-        NetworkObject.Despawn(true);
-    }
-}
-*/
+//3 практика
 
 /*
 using FishNet.Object;
@@ -37,30 +8,58 @@ public class Projectile : NetworkBehaviour
 {
     [SerializeField] private float _speed = 18f;
     [SerializeField] private int _damage = 20;
+    [SerializeField] private float _ignoreOwnerTime = 0.1f;
+
+    private float _spawnTime;
+    private bool _initialized;
+
+    public override void OnStartNetwork()
+    {
+        base.OnStartNetwork();
+        _spawnTime = Time.time;
+        _initialized = true;
+    }
 
     private void Update()
     {
+        if (!_initialized) return;
         transform.Translate(Vector3.forward * _speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!base.IsServerInitialized) return;
+        Debug.Log($"[Projectile] Trigger with {other.name}");
 
-        var target = other.GetComponent<PlayerNetwork>();
-        if (target == null) return;
+        if (!base.IsServerStarted) return;
+        if (!_initialized) return;
 
-        // ѕроверка на дружественный огонь
-        if (target.OwnerId == base.OwnerId) return;
+        if (Time.time < _spawnTime + _ignoreOwnerTime)
+        {
+            NetworkObject ownerNetObj = other.GetComponentInParent<NetworkObject>();
+            if (ownerNetObj != null && ownerNetObj.OwnerId == OwnerId)
+                return;
+        }
 
-        int newHp = Mathf.Max(0, target.HP - _damage);
-        target.HP = newHp;
+        PlayerNetwork target = other.GetComponentInParent<PlayerNetwork>();
+        if (target == null)
+        {
+            Debug.Log("[Projectile] No PlayerNetwork on target");
+            return;
+        }
 
-        // FishNet: деспаун через ServerManager
-        ServerManager.Despawn(gameObject);
+        Debug.Log($"[Projectile] HIT target OwnerId={target.OwnerId}, myOwner={OwnerId}");
+
+        if (target.OwnerId == OwnerId) return;
+
+        int newHp = Mathf.Max(0, target.HP.Value - _damage);
+        target.HP.Value = newHp;
+        Debug.Log($"[Projectile] DAMAGE: {_damage}, new HP={target.HP.Value}");
+
+        base.Despawn();
     }
 }
 */
+
 
 using FishNet.Object;
 using UnityEngine;
@@ -69,26 +68,46 @@ public class Projectile : NetworkBehaviour
 {
     [SerializeField] private float _speed = 18f;
     [SerializeField] private int _damage = 20;
+    [SerializeField] private float _ignoreOwnerTime = 0.1f;
+
+    private float _spawnTime;
+    private bool _initialized;
+    private PlayerNetwork _shooter;
+
+    public void SetShooter(PlayerNetwork shooter) => _shooter = shooter;
+
+    public override void OnStartNetwork()
+    {
+        base.OnStartNetwork();
+        _spawnTime = Time.time;
+        _initialized = true;
+    }
 
     private void Update()
     {
+        if (!_initialized) return;
         transform.Translate(Vector3.forward * _speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        // “олько сервер обрабатывает столкновени€
-        if (!IsServerInitialized) return;
+        if (!IsServerStarted || !_initialized) return;
 
-        var target = other.GetComponent<PlayerNetwork>();
-        if (target == null) return;
+        if (Time.time < _spawnTime + _ignoreOwnerTime)
+        {
+            var ownerNetObj = other.GetComponentInParent<NetworkObject>();
+            if (ownerNetObj != null && ownerNetObj.OwnerId == OwnerId) return;
+        }
 
-        if (target.Owner.ClientId == Owner.ClientId) return;
+        var target = other.GetComponentInParent<PlayerNetwork>();
+        if (target == null || target.OwnerId == OwnerId) return;
 
         int newHp = Mathf.Max(0, target.HP.Value - _damage);
         target.HP.Value = newHp;
 
-        // ƒеспавним снар€д
+        if (newHp <= 0 && _shooter != null)
+            _shooter.AddScore();
+
         base.Despawn();
     }
 }

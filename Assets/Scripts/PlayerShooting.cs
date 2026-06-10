@@ -210,7 +210,6 @@ public class PlayerShooting : NetworkBehaviour
 
 */
 
-using FishNet;
 using FishNet.Object;
 using UnityEngine;
 
@@ -229,32 +228,31 @@ public class PlayerShooting : NetworkBehaviour
 
     public override void OnStartServer()
     {
+        base.OnStartServer();
         _currentAmmo = _maxAmmo;
         _playerNetwork = GetComponent<PlayerNetwork>();
         _lastAmmoRegenTime = Time.time;
-
-        Debug.Log($"[PlayerShooting] Server spawned with {_currentAmmo} ammo");
     }
 
     public override void OnStartClient()
     {
+        base.OnStartClient();
         _playerNetwork = GetComponent<PlayerNetwork>();
     }
 
     private void Update()
     {
-        if (!IsOwner) return;
+        if (!base.IsOwner) return;
 
         if (_playerNetwork != null && !_playerNetwork.IsAlive.Value) return;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log($"[PlayerShooting] Shoot attempt - Ammo: {_currentAmmo}, IsAlive: {_playerNetwork?.IsAlive.Value}");
+            Debug.Log($"[Shooting] Fire attempt. Ammo={_currentAmmo}, HP={_playerNetwork?.HP.Value}, IsAlive={_playerNetwork?.IsAlive.Value}");
             ShootServerRpc(_firePoint.position, _firePoint.forward);
         }
 
-        // Регенерация патронов на сервере
-        if (IsServerInitialized)
+        if (base.IsServerStarted)
         {
             RegenAmmo();
         }
@@ -266,36 +264,35 @@ public class PlayerShooting : NetworkBehaviour
         {
             _currentAmmo++;
             _lastAmmoRegenTime = Time.time;
-            Debug.Log($"[PlayerShooting] Ammo regenerated: {_currentAmmo}/{_maxAmmo}");
         }
     }
 
     [ServerRpc]
-    private void ShootServerRpc(Vector3 pos, Vector3 dir, FishNet.Connection.NetworkConnection sender = null)
+    private void ShootServerRpc(Vector3 pos, Vector3 dir)
     {
-        Debug.Log($"[PlayerShooting] ServerRpc received - HP: {_playerNetwork?.HP.Value}, Ammo: {_currentAmmo}");
+        Debug.Log($"[Shooting] ServerRpc called. HP={_playerNetwork?.HP.Value}, Ammo={_currentAmmo}");
 
         if (_playerNetwork == null)
         {
-            Debug.LogError("[PlayerShooting] PlayerNetwork is null!");
+            Debug.LogError("[Shooting] PlayerNetwork is null!");
             return;
         }
 
         if (_playerNetwork.HP.Value <= 0)
         {
-            Debug.Log("[PlayerShooting] Rejected: Player dead");
+            Debug.Log("[Shooting] Rejected: dead");
             return;
         }
 
         if (_currentAmmo <= 0)
         {
-            Debug.Log("[PlayerShooting] Rejected: No ammo");
+            Debug.Log("[Shooting] Rejected: no ammo");
             return;
         }
 
         if (Time.time < _lastShotTime + _cooldown)
         {
-            Debug.Log("[PlayerShooting] Rejected: Cooldown");
+            Debug.Log("[Shooting] Rejected: cooldown");
             return;
         }
 
@@ -303,28 +300,29 @@ public class PlayerShooting : NetworkBehaviour
         _currentAmmo--;
         _lastAmmoRegenTime = Time.time;
 
-        Debug.Log($"[PlayerShooting] Shooting! Ammo left: {_currentAmmo}");
-
-        var go = Instantiate(_projectilePrefab, pos + dir * 1.2f, Quaternion.LookRotation(dir));
-        var no = go.GetComponent<NetworkObject>();
-        if (no != null)
+        GameObject go = Instantiate(_projectilePrefab, pos + dir * 1.2f, Quaternion.LookRotation(dir));
+        Debug.Log($"[Shooting] Instantiated at {go.transform.position}");
+        Projectile proj = go.GetComponent<Projectile>();
+        if (proj != null)
+            proj.SetShooter(_playerNetwork);
+        NetworkObject nob = go.GetComponent<NetworkObject>();
+        if (nob != null)
         {
-            // Спавним снаряд и назначаем владельца
-            InstanceFinder.ServerManager.Spawn(go, sender);
+            base.Spawn(nob, base.Owner);
+            Debug.Log($"[Shooting] Spawned projectile with OwnerId={OwnerId}");
         }
         else
         {
-            Debug.LogError("[PlayerShooting] Projectile missing NetworkObject!");
+            Debug.LogError("[Shooting] Projectile missing NetworkObject!");
             Destroy(go);
         }
     }
 
     public void ResetAmmo()
     {
-        if (IsServerInitialized)
+        if (base.IsServerStarted)
         {
             _currentAmmo = _maxAmmo;
-            Debug.Log($"[PlayerShooting] Ammo reset to {_currentAmmo}");
         }
     }
-}
+}   

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CE82CE88-0058-A67F-B23C-B5908C5A4E77}</ProjectGuid>
+    <ProjectGuid>{BAC66205-DB8D-6431-750E-5037201DC866}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Timeline.Editor</AssemblyName>
@@ -171,8 +171,8 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Items\MarkerItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Undo\ApplyDefaultUndoAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\treeview\Control.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Window\TimelineWindow_Navigator.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Signals\SignalEmitterInspector.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Window\TimelineWindow_Navigator.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\ObjectIdExtension.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Undo\UndoScope.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\TimelineSelection.cs" />
@@ -320,8 +320,8 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Window\PlaybackScroller.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Items\ClipItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\treeview\ItemGui\TimelineMarkerClusterGUI.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Utilities\MarkerModifier.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Manipulators\Utils\EditModeRippleUtils.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Utilities\MarkerModifier.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Utilities\TrackResourceCache.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Utilities\Scopes\GUIMixedValueScope.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@7f8b2fb101b6\Editor\Recording\AnimationTrackRecorder.cs" />
@@ -832,6 +832,14 @@
     </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>E:\UNITY\HMM\6000.0.43f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Library\PackageCache\com.unity.services.wire@cc07372d5f37\Plugins\websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
@@ -1405,15 +1413,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{ADDE958D-EFDC-F14B-A567-975EA799B498}</Project>
+      <Project>{A5212BC1-FE8A-1D49-124E-B61569D87D14}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{3FB4A97A-3AF9-7F02-75F6-25F505107956}</Project>
+      <Project>{DF94894E-F2F3-AAA7-8339-17B959001FA7}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{18F975BA-5AA9-E596-FA20-B2F9E88844BA}</Project>
+      <Project>{AB41AB4A-CB47-9140-FC2C-4C71D985770D}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
